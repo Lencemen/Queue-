@@ -68,7 +68,7 @@ while(1){
         case 3:
         display(queue,front,rear);
         break;
-        case 4:
+        default:
         exit(1);
     }
 }
