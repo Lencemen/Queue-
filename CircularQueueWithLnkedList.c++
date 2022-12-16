@@ -44,6 +44,6 @@ void display(node *front,node *rear){
     while(front!=rear){
         cout<<front->info<<endl;
         front=front->next;
-        cout<<rear->info<<endl;
     }
+        cout<<rear->info<<endl;
 }
