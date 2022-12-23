@@ -43,6 +43,7 @@ void display(node *front,node *rear){
         cout<<front->info<<endl;
         front=front->next;
     }
+    cout<<rear->info<<endl;
 }
 int main(){
     node queue[MAX];
