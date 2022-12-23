@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#define MAX 100
 typedef struct nodetype{
     int info;
     struct nodetype *next;
@@ -46,4 +47,33 @@ void display(node *front,node *rear){
         front=front->next;
     }
         cout<<rear->info<<endl;
+}
+int main(){
+node queue[MAX],*front,*rear;
+front=NULL,rear=NULL;
+int choice,item;
+while(1){
+    cout<<"Welcome to Circular Queue program"<<endl;
+    cout<<"Enter your Choice"<<endl;
+    cout<<"1.Enqueue"<<endl;
+    cout<<"2.Dequeue"<<endl;
+    cout<<"3.Display"<<endl;
+    cout<<"4.Exit"<<endl;
+    cin>>choice;
+    switch(choice){
+        case 1:
+        cout<<"Enter item"<<endl;
+        cin>>item;
+        enqueue(&front,&rear,item);
+        break;
+        case 2:
+        dequeue(&front,&rear);
+        break;
+        case 3:
+        display(front,rear);
+        break;
+        default:
+        exit(1);
+    }
+}
 }
