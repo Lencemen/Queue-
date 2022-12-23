@@ -39,7 +39,7 @@ void display(node *front,node *rear){
         cout<<"queue is empty"<<endl;
         return;
     }
-    while(front<=rear){
+    while(front!=rear){
         cout<<front->info<<endl;
         front=front->next;
     }
