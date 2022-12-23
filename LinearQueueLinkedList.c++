@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#define MAX 100
 typedef struct nodetype {
     int info;
     struct nodetype *next;
@@ -44,7 +45,10 @@ void display(node *front,node *rear){
     }
 }
 int main(){
+    node queue[MAX];
     node *front,*rear;
+    front=NULL;
+    rear=NULL;
     int choice,item;
     while(1){
         cout<<"Welcome to Queue "<<endl;
