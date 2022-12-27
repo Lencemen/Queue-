@@ -46,6 +46,32 @@ void display(int queue[],int front,int rear){
         }
     }
 }
+void enqueue_front(int queue[],int *front,int *rear,int item){
+    if (*front==(*rear+1)%MAX){
+        cout<<"overflow"<<endl;
+        return;
+    }
+    if (*front==-1){
+        *front=*rear=MAX-1;
+    }
+    else{
+        *front=(*front+MAX-1)%MAX;
+    }
+    queue[*front]=item;
+}
+void dequeue_rear(int queue[],int *front,int *rear){
+    if (*front==-1){
+        cout<<"underflow"<<endl;
+        return;
+    }
+    cout<<"deleted item"<<queue[*rear]<<endl;
+    if (*front==*rear){
+        *front=*rear=-1;
+    }
+    else{
+        *rear=(*rear+MAX-1)%MAX;
+    }
+}
 int main(){
 int queue[MAX],front=-1,rear=-1,choice,item;
 while(1){
