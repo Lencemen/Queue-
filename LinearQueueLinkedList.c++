@@ -71,6 +71,7 @@ int main(){
             break;
         case 3:
             display(front,rear);
+            break;
         default:
         exit(1);
         }
